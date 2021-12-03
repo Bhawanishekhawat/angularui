@@ -13,7 +13,7 @@ export class RegistrationComponent implements OnInit {
   user: User=new User("","",new Date,new Date,0,"","","");
   message:any;
   messages: any ;
-  exform:FormGroup;
+  exform!:FormGroup;
   
   constructor( private service : UserRegistrationService) { }
 
@@ -49,9 +49,9 @@ export class RegistrationComponent implements OnInit {
       this.message=data
        alert(': you have been successfully registered')
     }
-      ) , error => {
+       , error => {
       alert('Sorry Somethine went wrong')
-    };
+    });
     
     
   }
